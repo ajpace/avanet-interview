@@ -1,24 +1,51 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="avanet">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
     <title>Aaron Pace | Avanet Home Test</title>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-          crossorigin="anonymous">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-          crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-            crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      
+    <!-- Normally these files would be concatenated & compiled ... -->
+    <link href="demo.css" rel="stylesheet">
+    <link href="av-aspect/av-aspect.css" rel="stylesheet">
   </head>
+
   <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Type <span class="caret"></span></a></li>
+            <li><a href="#">Time <span class="caret"></span></a></li>
+            <li><a href="#">Publisher <span class="caret"></span></a></li>
+            <li><a href="#">Elevation <span class="caret"></span></a></li>
+            <li class="dropdown open">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Aspect <span class="caret"></span></a>
+              <av-aspect class="dropdown-menu" ng-model="aspect"></av-aspect>
+            </li>
+            <li><a href="#">Slope <span class="caret"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <p>Nothing here {{'yet' + '!'}}</p>
+    <div class="selected-aspect">{{aspect | aspectDisplay}}</div>
+    <img src="goblin_valley_sp_88.jpg"/>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+      
+    <!-- Normally these scripts would be joined and minified ... -->
+    <script src="app.js"></script>
+    <script src="av-aspect/av-aspect.module.js"></script>
+    <script src="av-aspect/av-aspect.controller.js"></script>
+    <script src="av-aspect/av-aspect.directive.js"></script>
+    <script src="av-aspect/aspect-display.filter.js"></script>
   </body>
 </html>
