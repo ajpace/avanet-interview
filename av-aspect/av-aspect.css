@@ -1,0 +1,22 @@
+.aspect-widget {
+  padding: 10px;
+  position: relative;
+}
+
+.aspect-widget canvas {
+  position: absolute;
+  z-index: 100;
+}
+
+.selected-aspect {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 35px;
+  color: white;
+  font-size: 50px;
+  left: 0;
+  padding: 0 25px;
+  position: fixed;
+  top: 0;
+  text-shadow: 1px 1px rgba(0,0,0,0.8);
+  z-index: 2000;
+}
