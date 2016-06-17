@@ -1,1 +1,3 @@
-# avanet-interview
+- Open demo.html in your browser.
+- Problem statement is [here](FullStackhometest.pdf)
+- Initial thoughts and designs are [here](https://docs.google.com/document/d/1IXq60bRg1dY-6MxH_IxNsI44paLLIAd8WROTFTNGC_E/edit?usp=sharing)
